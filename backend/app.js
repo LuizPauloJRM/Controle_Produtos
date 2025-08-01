@@ -1,6 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
+const categoryRoutes = require('./routes/categories');
+app.use('/categories', categoryRoutes);
 
 // Adicione estes middlewares ANTES das rotas!
 app.use(cors());
